@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "TesteCertificadoApplication",
+            "request": "launch",
+            "mainClass": "br.com.daniel.testecertificado.TesteCertificadoApplication",
+            "projectName": "teste-certificado",
+            "args": [
+                "--spring.profiles.active=local",
+                "-Dspring-boot.run.arguments=--server.port=8081"
+            ],
+            "env": {
+                "SSL_KEY_STORE_PASSWORD": "qawsedrf"
+            },
+            "preLaunchTask": "run-maven-command"
+        }
+    ]
+}

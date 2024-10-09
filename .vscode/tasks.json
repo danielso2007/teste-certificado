@@ -1,0 +1,45 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "run-maven-command",
+            "type": "shell",
+            "command": "./mvnw clean package -Dmaven.test.skip=true",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run-maven-command-flyway-clean",
+            "type": "shell",
+            "command": "./mvnw flyway:clean",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run-maven-command-flyway-migrate",
+            "type": "shell",
+            "command": "./mvnw flyway:migrate",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "run-maven-command-zerar-banco",
+            "type": "shell",
+            "command": "./mvnw flyway:clean flyway:migrate",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+}
